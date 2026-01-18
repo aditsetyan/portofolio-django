@@ -1,0 +1,70 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cybersecurity Solutions | Aaditan</title>
+
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=4" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="{% url 'home' %}" class="nav-logo">
+          <img
+            src="{% static 'images/logo.png' %}"
+            alt="Logo"
+            style="height: 35px; width: auto; margin-right: 10px"
+          />
+          Aaditan
+        </a>
+
+        <nav>
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'skills' %}">Skills</a>
+          <a href="{% url 'projects' %}">Projects</a>
+        </nav>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+      <p>&copy; 2026 Aaditan. Built with Django, Python & Caffeine.</p>
+    </footer>
+
+    <div id="cookieBanner" class="cookie-banner">
+      <div class="cookie-content">
+        <i class="fas fa-shield-alt cookie-icon"></i>
+        <div class="cookie-text">
+          <h4>Security Protocol</h4>
+          <p>
+            This system uses cookies to ensure
+            <strong>session integrity</strong> and optimize user experience.
+          </p>
+        </div>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn-cookie-outline" onclick="closeCookie()">
+          Decline
+        </button>
+        <button class="btn-cookie-solid" onclick="acceptCookie()">
+          Authorize
+        </button>
+      </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}?v=5"></script>
+  </body>
+</html>

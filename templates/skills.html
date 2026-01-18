@@ -1,0 +1,90 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<main>
+  <section id="skills" class="fullpage glass-bg">
+    <div class="fullpage-inner">
+      <div class="tech-header anim-drop">
+        <span class="badge-pro">SYSTEM CAPABILITIES</span>
+        <h2>Technical Arsenal</h2>
+        <p>Comprehensive overview of security infrastructure & engineering.</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card anim-up delay-1">
+          <div class="scan-line"></div>
+          <div class="card-header">
+            <div class="icon-frame"><i class="fas fa-biohazard"></i></div>
+            <div class="header-text">
+              <h3>Security Ops</h3>
+              <span>Red & Blue Team</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li>
+                <strong>Offensive:</strong> Metasploit, Burp Suite, SQLMap
+              </li>
+              <li><strong>Defensive:</strong> Wazuh SIEM, Snort IDS/IPS</li>
+              <li>
+                <strong>Intel:</strong> OSINT, Threat Hunting, MITRE ATT&CK
+              </li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <i class="fab fa-linux"></i>
+            <i class="fas fa-bug"></i>
+            <i class="fas fa-user-secret"></i>
+          </div>
+        </div>
+
+        <div class="tech-card anim-up delay-2">
+          <div class="scan-line"></div>
+          <div class="card-header">
+            <div class="icon-frame"><i class="fas fa-network-wired"></i></div>
+            <div class="header-text">
+              <h3>Infrastructure</h3>
+              <span>Cloud & Network</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li><strong>Network:</strong> MikroTik, Cisco, VPN Tunneling</li>
+              <li><strong>Cloud:</strong> AWS (EC2/S3), Docker Containers</li>
+              <li><strong>Virtualization:</strong> VMware vSphere, Proxmox</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <i class="fab fa-aws"></i>
+            <i class="fab fa-docker"></i>
+            <i class="fas fa-wifi"></i>
+          </div>
+        </div>
+
+        <div class="tech-card anim-up delay-3">
+          <div class="scan-line"></div>
+          <div class="card-header">
+            <div class="icon-frame"><i class="fas fa-code-branch"></i></div>
+            <div class="header-text">
+              <h3>Engineering</h3>
+              <span>DevSecOps & Forensics</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <ul>
+              <li><strong>Automation:</strong> Python & Bash Scripting</li>
+              <li><strong>Web Sec:</strong> Django Security Middleware</li>
+              <li>
+                <strong>Forensics:</strong> FTK Imager, Autopsy, Volatility
+              </li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <i class="fab fa-python"></i>
+            <i class="fab fa-git-alt"></i>
+            <i class="fas fa-search-location"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
