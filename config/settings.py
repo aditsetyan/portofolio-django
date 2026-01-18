@@ -121,3 +121,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
+
+# TAMBAHKAN INI DI PALING BAWAH (WAJIB ADA):
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+# Gunakan storage yang "pemaaf" (biar kalau ada gambar hilang, deploy tetap sukses)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
