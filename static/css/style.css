@@ -267,7 +267,7 @@ main {
   padding: 80px 5%;
 }
 .fullpage-inner {
-  max-width: 1600px; /* UPDATE 1: Diperlebar dari 1200px biar desktop lebih lega */
+  max-width: 1600px; /* Layout Fix 1: Desktop Lega */
   margin: auto;
   width: 100%;
 }
@@ -776,6 +776,49 @@ main {
 .btn-outline:hover {
   background: var(--accent-soft);
 }
+
+/* =========================================
+   LANGUAGE SWITCHER (New Feature)
+   ========================================= */
+.lang-switch-container {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-lang {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--accent-strong);
+  color: var(--text-muted);
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Consolas", monospace;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-lang:hover {
+  background: var(--accent-strong);
+  color: #fff;
+  box-shadow: 0 0 10px var(--accent-strong);
+}
+
+.btn-lang span.active {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #fff;
+}
+
+.btn-lang span.divider {
+  color: var(--accent-soft);
+  margin: 0 5px;
+}
+
 footer {
   text-align: center;
   padding: 40px;
@@ -1070,7 +1113,7 @@ footer {
    ========================================= */
 .timeline-container {
   position: relative;
-  max-width: 1400px; /* UPDATE 2: Diperlebar dari 1000px agar kartu desktop lebih besar */
+  max-width: 1400px; /* Layout Fix 2: Kartu Desktop Besar */
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -1227,9 +1270,9 @@ footer {
     right: auto;
   }
 
-  /* UPDATE 3: Batasi lebar konten di mode mobile/split agar tidak 'melar' */
+  /* Layout Fix 3: Mobile/Split Screen Tidak Melar */
   .timeline-content {
-    max-width: 600px; /* Ini kuncinya: Biar ukurannya mirip desktop */
+    max-width: 600px; /* KUNCI RAHASIA: Biar tampilan tetap ramping */
     width: 100%;
   }
 
