@@ -14,7 +14,7 @@
 
     <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" />
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=4" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=5" />
 
     <link
       rel="stylesheet"
@@ -49,6 +49,39 @@
       <p>&copy; 2026 Aaditan. Built with Django, Python & Caffeine.</p>
     </footer>
 
+    <div class="lang-switch-container">
+      <button id="langToggle" class="btn-lang" onclick="toggleLanguage()">
+        <span class="active">ID</span>
+        <span class="divider">/</span>
+        <span>EN</span>
+      </button>
+    </div>
+
+    <div class="contact-dock">
+      <div class="dock-status">
+        <div class="pulse-dot"></div>
+        <span class="status-text">Available for Work</span>
+      </div>
+      <div class="dock-divider"></div>
+      <div class="dock-icons">
+        <a
+          href="https://github.com/aditsetyan"
+          target="_blank"
+          class="dock-link"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://linkedin.com/in/aditsetyan"
+          target="_blank"
+          class="dock-link"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="mailto:emailmu@example.com" class="dock-link"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+    </div>
+
     <div id="cookieBanner" class="cookie-banner">
       <div class="cookie-content">
         <i class="fas fa-shield-alt cookie-icon"></i>
@@ -70,6 +103,6 @@
       </div>
     </div>
 
-    <script src="{% static 'js/script.js' %}?v=5"></script>
+    <script src="{% static 'js/script.js' %}?v=6"></script>
   </body>
 </html>
