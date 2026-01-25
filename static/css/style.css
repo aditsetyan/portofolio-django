@@ -1254,13 +1254,10 @@ footer {
   /* Sembunyikan tanggal di samping, masukkan ke dalam kartu jika perlu, 
      atau sesuaikan posisinya di atas kartu */
   .timeline-date {
-    position: relative;
+    position: relative; /* INI KUNCINYA! */
     top: auto;
-    left: auto !important;
-    right: auto !important;
     margin-bottom: 10px;
     display: block;
-    text-align: left !important;
   }
 }
 
