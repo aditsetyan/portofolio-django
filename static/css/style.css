@@ -267,7 +267,7 @@ main {
   padding: 80px 5%;
 }
 .fullpage-inner {
-  max-width: 1200px;
+  max-width: 1600px; /* UPDATE 1: Diperlebar dari 1200px biar desktop lebih lega */
   margin: auto;
   width: 100%;
 }
@@ -1003,30 +1003,6 @@ footer {
   border-color: var(--text-muted);
   color: #fff;
 }
-@media (max-width: 600px) {
-  .cookie-banner {
-    left: 50%;
-    transform: translateX(-50%) translateY(150px);
-    bottom: 20px;
-    width: 90%;
-    padding: 20px;
-  }
-  .cookie-banner.show {
-    transform: translateX(-50%) translateY(0);
-  }
-  .cookie-content {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .cookie-actions {
-    justify-content: space-between;
-  }
-  .btn-cookie-solid,
-  .btn-cookie-outline {
-    flex: 1;
-    text-align: center;
-  }
-}
 .scroll-visible .siem-dashboard {
   animation: expandWidth 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   opacity: 1;
@@ -1094,7 +1070,7 @@ footer {
    ========================================= */
 .timeline-container {
   position: relative;
-  max-width: 1000px;
+  max-width: 1400px; /* UPDATE 2: Diperlebar dari 1000px agar kartu desktop lebih besar */
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -1229,7 +1205,6 @@ footer {
 
 /* RESPONSIVE MOBILE (Garis pindah ke kiri) */
 @media screen and (max-width: 1024px) {
-  /* UPDATE: GANTI KE 1024px BIAR SPLIT SCREEN AMAN */
   .timeline-container::after {
     left: 31px;
   }
@@ -1252,10 +1227,16 @@ footer {
     right: auto;
   }
 
+  /* UPDATE 3: Batasi lebar konten di mode mobile/split agar tidak 'melar' */
+  .timeline-content {
+    max-width: 600px; /* Ini kuncinya: Biar ukurannya mirip desktop */
+    width: 100%;
+  }
+
   /* Sembunyikan tanggal di samping, masukkan ke dalam kartu jika perlu,
      atau sesuaikan posisinya di atas kartu */
   .timeline-date {
-    position: relative; /* INI KUNCINYA! */
+    position: relative;
     top: auto;
     left: auto !important;
     right: auto !important;
