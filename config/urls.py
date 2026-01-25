@@ -1,4 +1,5 @@
 """
+
 URL configuration for config project.
 """
 from django.contrib import admin
