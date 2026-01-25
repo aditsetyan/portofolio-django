@@ -1,5 +1,4 @@
-{% extends 'base.html' %} {% block content %}
-
+{% extends 'base.html' %} {% load static %} {% block content %}
 <main>
   <section class="fullpage section-hero" id="home">
     <div class="fullpage-inner hero">
@@ -117,7 +116,7 @@
                 <td class="msg">
                   Developing capabilities toward
                   <strong>entry-level SOC Analyst / Network Security</strong>
-                  roles. > roles.<span class="cursor">_</span>
+                  roles. <span class="blink">_</span>
                 </td>
               </tr>
             </tbody>
@@ -244,9 +243,7 @@
           <div class="ops-card-body">
             <h3>IPS Optimization Research</h3>
             <span class="ops-role">Individual Research</span>
-
             <div class="ops-divider"></div>
-
             <div class="ops-summary">
               <p>
                 <strong>Mission:</strong> Engineer an inline Snort 3 IPS to
@@ -258,7 +255,6 @@
                 between false positives and detection latency.
               </p>
             </div>
-
             <div class="ops-tags">
               <span>Snort 3 Inline</span>
               <span>Bash Script</span>
@@ -275,9 +271,7 @@
           <div class="ops-card-body">
             <h3>Enterprise Perimeter Hardening</h3>
             <span class="ops-role">Security Engineer Intern</span>
-
             <div class="ops-divider"></div>
-
             <div class="ops-summary">
               <p>
                 <strong>Mission:</strong> Fortify corporate infrastructure
@@ -289,7 +283,6 @@
                 (L7) with SSL Interception for granular access control.
               </p>
             </div>
-
             <div class="ops-tags">
               <span>Linux NGFW</span>
               <span>Squid Proxy</span>
@@ -306,9 +299,7 @@
           <div class="ops-card-body">
             <h3>ISO 27001 Compliance Audit</h3>
             <span class="ops-role">Audit Team Member</span>
-
             <div class="ops-divider"></div>
-
             <div class="ops-summary">
               <p>
                 <strong>Mission:</strong> Evaluate security posture gaps against
@@ -319,7 +310,6 @@
                 vulnerabilities to ISO 19011 & NIST CSF frameworks.
               </p>
             </div>
-
             <div class="ops-tags">
               <span>ISO 27001</span>
               <span>NIST CSF</span>
@@ -330,45 +320,6 @@
       </div>
     </div>
   </section>
-
-  <div class="contact-dock">
-    <div class="dock-status">
-      <span class="pulse-dot"></span>
-      <span class="status-text">Available for Collaboration</span>
-    </div>
-
-    <div class="dock-divider"></div>
-
-    <div class="dock-icons">
-      <a
-        href="https://wa.me/628895759084"
-        target="_blank"
-        class="dock-link"
-        title="WhatsApp"
-      >
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="mailto:aditsetyan884@gmail.com" class="dock-link" title="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/aditsetyanugroho/"
-        target="_blank"
-        class="dock-link"
-        title="LinkedIn"
-      >
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a
-        href="https://github.com/aditsetyan"
-        target="_blank"
-        class="dock-link"
-        title="GitHub"
-      >
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
 
   <div class="cookie-banner" id="cookieBanner">
     <div class="cookie-content">
@@ -382,8 +333,7 @@
           telemetry to maintain
           <strong>connection integrity</strong>, <strong>audit trails</strong>,
           and <strong>operational security</strong>. All data processing adheres
-          to strict <strong>Zero Trust</strong> principles and
-          <strong>ISO/IEC 27001</strong> information security standards.
+          to strict <strong>Zero Trust</strong> principles.
         </p>
       </div>
     </div>
@@ -398,24 +348,38 @@
     </div>
   </div>
 
-  <script>
-    window.addEventListener("load", function () {
-      if (!localStorage.getItem("cookieAccepted")) {
-        setTimeout(function () {
-          document.getElementById("cookieBanner").classList.add("show");
-        }, 1500); // Delay sedikit lebih lama biar elegan
-      }
-    });
-
-    function acceptCookie() {
-      localStorage.setItem("cookieAccepted", "true");
-      document.getElementById("cookieBanner").classList.remove("show");
-    }
-
-    function closeCookie() {
-      document.getElementById("cookieBanner").classList.remove("show");
-    }
-  </script>
+  <div class="contact-dock">
+    <div class="dock-status">
+      <span class="pulse-dot"></span>
+      <span class="status-text">Available for Collaboration</span>
+    </div>
+    <div class="dock-divider"></div>
+    <div class="dock-icons">
+      <a
+        href="https://wa.me/628895759084"
+        target="_blank"
+        class="dock-link"
+        title="WhatsApp"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+      <a href="mailto:aditsetyan884@gmail.com" class="dock-link" title="Email"
+        ><i class="fas fa-envelope"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/aditsetyanugroho/"
+        target="_blank"
+        class="dock-link"
+        title="LinkedIn"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a
+        href="https://github.com/aditsetyan"
+        target="_blank"
+        class="dock-link"
+        title="GitHub"
+        ><i class="fab fa-github"></i
+      ></a>
+    </div>
+  </div>
 </main>
-
-{% endblock %}
+{% endblock %} {% block floating_ui %} {% endblock %}
