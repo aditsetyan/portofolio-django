@@ -1228,7 +1228,8 @@ footer {
 }
 
 /* RESPONSIVE MOBILE (Garis pindah ke kiri) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  /* UPDATE: GANTI KE 1024px BIAR SPLIT SCREEN AMAN */
   .timeline-container::after {
     left: 31px;
   }
@@ -1251,13 +1252,16 @@ footer {
     right: auto;
   }
 
-  /* Sembunyikan tanggal di samping, masukkan ke dalam kartu jika perlu, 
+  /* Sembunyikan tanggal di samping, masukkan ke dalam kartu jika perlu,
      atau sesuaikan posisinya di atas kartu */
   .timeline-date {
     position: relative; /* INI KUNCINYA! */
     top: auto;
+    left: auto !important;
+    right: auto !important;
     margin-bottom: 10px;
     display: block;
+    text-align: left !important;
   }
 }
 
