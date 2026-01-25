@@ -14,7 +14,7 @@
 
     <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" />
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=5" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=6" />
 
     <link
       rel="stylesheet"
@@ -48,6 +48,8 @@
     <footer>
       <p>&copy; 2026 Aaditan. Built with Django, Python & Caffeine.</p>
     </footer>
+
+    {% block floating_ui %}
 
     <div class="lang-switch-container">
       <button id="langToggle" class="btn-lang" onclick="toggleLanguage()">
@@ -103,6 +105,7 @@
       </div>
     </div>
 
+    {% endblock %}
     <script src="{% static 'js/script.js' %}?v=6"></script>
   </body>
 </html>

@@ -860,7 +860,7 @@ footer {
 /* =========================================
    FLOATING ELEMENTS (Contact Dock & Language)
    ========================================= */
-/* Contact Dock */
+/* Contact Dock (Pojok Kanan Bawah) */
 .contact-dock {
   position: fixed;
   bottom: 30px;
@@ -929,11 +929,12 @@ footer {
   transform: scale(1.3) translateY(-3px);
 }
 
-/* FLOATING LANGUAGE SWITCHER */
+/* FLOATING LANGUAGE SWITCHER (Pojok Kanan Atas - UPDATE!) */
 .lang-switch-container {
   position: fixed;
-  bottom: 100px; /* Di atas tombol kontak */
+  top: 100px; /* Letaknya di ATAS (bawah header) */
   right: 30px;
+  bottom: auto; /* Hapus posisi bawah */
   z-index: 1001;
 
   background: rgba(43, 34, 34, 0.85);
@@ -970,7 +971,7 @@ footer {
 }
 
 .btn-lang span.active {
-  color: var(--terminal-green); /* Hijau terminal saat aktif */
+  color: var(--terminal-green);
   font-weight: bold;
   text-shadow: 0 0 8px rgba(163, 190, 140, 0.5);
 }
@@ -1161,7 +1162,7 @@ footer {
    ========================================= */
 .timeline-container {
   position: relative;
-  max-width: 1400px; /* Desktop Besar */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -1432,7 +1433,7 @@ footer {
   .timeline-content {
     max-width: 600px;
     width: 100%;
-  } /* Batasi lebar agar tidak melar */
+  }
 
   .timeline-date {
     position: relative;
@@ -1458,9 +1459,10 @@ footer {
     font-size: 2.2rem;
   }
 
-  /* Geser tombol bahasa di HP */
+  /* Geser tombol bahasa di HP agar tidak ketutup Header */
   .lang-switch-container {
-    bottom: 90px;
+    top: 150px;
+    bottom: auto;
     right: 20px;
   }
   .contact-dock {
